@@ -51,12 +51,16 @@ export async function InstallGlobalCommands(appId, commands) {
   }
 }
 
-// Simple method that returns a random emoji from list
-export function getRandomEmoji() {
-  const emojiList = ['😭','😄','😌','🤓','😎','😤','🤖','😶‍🌫️','🌏','📸','💿','👋','🌊','✨'];
-  return emojiList[Math.floor(Math.random() * emojiList.length)];
-}
+export function getVehicleFromPlate(plate) {
+  const VEHICLES = [
+    {
+      userId: '1082305747859279942',
+      plate: 'OKH0505',
+      brand: 'RENAULT',
+      model: 'SANDERO STEPWAY',
+      color: 'PRETO'
+    }
+  ];
 
-export function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+  return VEHICLES.find(vehicle => vehicle.plate === plate);
 }

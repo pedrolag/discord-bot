@@ -1,5 +1,5 @@
 {
-  "name": "getting-started",
+  "name": "discord-bot",
   "version": "1.0.0",
   "description": "Discord example app",
   "main": "app.js",
@@ -12,7 +12,7 @@
     "register": "node commands.js",
     "dev": "nodemon app.js"
   },
-  "author": "Shay DeWael",
+  "author": "Pedro Gonçalves",
   "license": "MIT",
   "dependencies": {
     "discord-interactions": "^3.2.0",

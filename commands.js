@@ -40,6 +40,24 @@ const CHALLENGE_COMMAND = {
   type: 1,
 };
 
-const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND];
+const CALL_FOR_VEHICLE_OWNER_COMMAND = {
+  name: 'call',
+  description: 'Call for the owner of the given vehicle\'s plate',
+  type: 1,
+  options: [
+    {
+      type: 3,
+      name: 'plate',
+      description: 'Vehicle\'s plate',
+      required: true,
+    }
+  ]
+};
+
+const ALL_COMMANDS = [
+  TEST_COMMAND,
+  CHALLENGE_COMMAND,
+  CALL_FOR_VEHICLE_OWNER_COMMAND
+];
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
